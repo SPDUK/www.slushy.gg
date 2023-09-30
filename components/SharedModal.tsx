@@ -14,7 +14,6 @@ import { variants } from '../utils/animationVariants'
 import downloadPhoto from '../utils/downloadPhoto'
 import { range } from '../utils/range'
 import type { ImageProps, SharedModalProps } from '../utils/types'
-import Twitter from './Icons/Twitter'
 
 export default function SharedModal({
   index,
@@ -55,12 +54,12 @@ export default function SharedModal({
       }}
     >
       <div
-        className="relative z-50 flex aspect-[9/16] w-full max-w-7xl items-center wide:h-full xl:taller-than-854:h-auto"
+        className="relative z-50 flex aspect-[2/3] w-full max-w-7xl items-center wide:h-full xl:taller-than-854:h-auto"
         {...handlers}
       >
         {/* Main image */}
         <div className="w-full overflow-hidden">
-          <div className="relative flex aspect-[9/16] items-center justify-center">
+          <div className="relative flex aspect-[2/3] items-center justify-center">
             <AnimatePresence initial={false} custom={direction}>
               <motion.div
                 key={index}
@@ -92,7 +91,7 @@ export default function SharedModal({
         <div className="absolute inset-0 mx-auto flex max-w-7xl items-center justify-center">
           {/* Buttons */}
           {loaded && (
-            <div className="relative aspect-[9/16] max-h-full w-full">
+            <div className="relative aspect-[3/2] max-h-full w-full">
               {navigation && (
                 <>
                   {index > 0 && (
@@ -115,28 +114,17 @@ export default function SharedModal({
                   )}
                 </>
               )}
-              <div className="absolute top-0 right-0 flex items-center gap-2 p-3 text-white">
-                {navigation ? (
-                  <a
-                    href={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/${currentImage.public_id}.${currentImage.format}`}
-                    className="rounded-full bg-black/50 p-2 text-white/75 backdrop-blur-lg transition hover:bg-black/75 hover:text-white"
-                    target="_blank"
-                    title="Open fullsize version"
-                    rel="noreferrer"
-                  >
-                    <ArrowTopRightOnSquareIcon className="h-5 w-5" />
-                  </a>
-                ) : (
-                  <a
-                    href={`https://twitter.com/intent/tweet?text=Check%20out%20this%20pic%20from%20Next.js%20Conf!%0A%0Ahttps://nextjsconf-pics.vercel.app/p/${index}`}
-                    className="rounded-full bg-black/50 p-2 text-white/75 backdrop-blur-lg transition hover:bg-black/75 hover:text-white"
-                    target="_blank"
-                    title="Open fullsize version"
-                    rel="noreferrer"
-                  >
-                    <Twitter className="h-5 w-5" />
-                  </a>
-                )}
+              <h1>hi</h1>
+              <div className="absolute top-3 right-3 flex items-center gap-2 p-3 text-white">
+                <a
+                  href={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/${currentImage.public_id}.${currentImage.format}`}
+                  className="rounded-full bg-black/50 p-2 text-white/75 backdrop-blur-lg transition hover:bg-black/75 hover:text-white"
+                  target="_blank"
+                  title="Open fullsize version"
+                  rel="noreferrer"
+                >
+                  <ArrowTopRightOnSquareIcon className="h-5 w-5" />
+                </a>
                 <button
                   onClick={() =>
                     downloadPhoto(
@@ -169,7 +157,7 @@ export default function SharedModal({
             <div className="fixed inset-x-0 bottom-0 z-40 overflow-hidden bg-gradient-to-b from-black/0 to-black/60">
               <motion.div
                 initial={false}
-                className="mx-auto mt-6 mb-6 flex aspect-[9/16] h-14"
+                className="mx-auto mt-6 mb-6 flex aspect-[3/2] h-14"
               >
                 <AnimatePresence initial={false}>
                   {filteredImages.map(({ public_id, format, id }) => (
