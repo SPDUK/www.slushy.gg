@@ -114,7 +114,6 @@ export default function SharedModal({
                   )}
                 </>
               )}
-              <h1>hi</h1>
               <div className="absolute top-3 right-3 flex items-center gap-2 p-3 text-white">
                 <a
                   href={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/${currentImage.public_id}.${currentImage.format}`}

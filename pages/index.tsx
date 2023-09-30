@@ -25,17 +25,16 @@ const Home: NextPage = ({ images }: { images: ImageProps[] }) => {
     }
   }, [photoId, lastViewedPhoto, setLastViewedPhoto])
 
+
+
   return (
     <>
       <Head>
         <title>Slushy.gg</title>
-        <meta
-          property="og:image"
-          content="https://nextjsconf-pics.vercel.app/og-image.png"
-        />
+        <meta property="og:image" content="https://dynamic-og-image-generator.vercel.app/api/generate?title=My%20AI%20art&author=Slushy.gg&theme=dracula" />
         <meta
           name="twitter:image"
-          content="https://nextjsconf-pics.vercel.app/og-image.png"
+          content="https://dynamic-og-image-generator.vercel.app//api/generate?title=My AI art&author=Slushy.gg&theme=Dracula"
         />
       </Head>
       <main className="mx-auto max-w-[1960px] p-4">
