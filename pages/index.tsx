@@ -34,7 +34,7 @@ const Home: NextPage = ({ images }: { images: ImageProps[] }) => {
         <meta property="og:image" content="https://dynamic-og-image-generator.vercel.app/api/generate?title=My%20AI%20art&author=Slushy.gg&theme=dracula" />
         <meta
           name="twitter:image"
-          content="https://dynamic-og-image-generator.vercel.app//api/generate?title=My AI art&author=Slushy.gg&theme=Dracula"
+          content="https://dynamic-og-image-generator.vercel.app/api/generate?title=My%20AI%20art&author=Slushy.gg&theme=dracula"
         />
       </Head>
       <nav className="sticky top-0 z-10 bg-slate-700 bg-opacity-10 backdrop-filter backdrop-blur-lg">
