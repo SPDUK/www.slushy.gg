@@ -23,7 +23,7 @@ class MyDocument extends Document {
             content="My AI art!"
           />
         </Head>
-        <body className="bg-black antialiased">
+        <body className="bg-slate-950  antialiased">
           <Main />
           <NextScript />
         </body>

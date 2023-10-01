@@ -37,6 +37,13 @@ const Home: NextPage = ({ images }: { images: ImageProps[] }) => {
           content="https://dynamic-og-image-generator.vercel.app//api/generate?title=My AI art&author=Slushy.gg&theme=Dracula"
         />
       </Head>
+      <nav className="sticky top-0 z-10 bg-slate-700 bg-opacity-10 backdrop-filter backdrop-blur-lg">
+      <div className="mx-auto max-w-[1960px]">
+        <div className="flex items-center justify-between h-16">
+          <span className="text-2xl text-gray-100 font-semibold">Slushy.gg</span>
+        </div>
+      </div>
+    </nav>
       <main className="mx-auto max-w-[1960px] p-4">
         {photoId && (
           <Modal
@@ -75,34 +82,7 @@ const Home: NextPage = ({ images }: { images: ImageProps[] }) => {
         </div>
       </main>
       <footer className="p-6 text-center text-white/80 sm:p-12">
-        Thank you to{' '}
-        <a
-          href="https://edelsonphotography.com/"
-          target="_blank"
-          className="font-semibold hover:text-white"
-          rel="noreferrer"
-        >
-          Josh Edelson
-        </a>
-        ,{' '}
-        <a
-          href="https://www.newrevmedia.com/"
-          target="_blank"
-          className="font-semibold hover:text-white"
-          rel="noreferrer"
-        >
-          Jenny Morgan
-        </a>
-        , and{' '}
-        <a
-          href="https://www.garysextonphotography.com/"
-          target="_blank"
-          className="font-semibold hover:text-white"
-          rel="noreferrer"
-        >
-          Gary Sexton
-        </a>{' '}
-        for the pictures.
+        Just a collection of my AI art 😼
       </footer>
     </>
   )
